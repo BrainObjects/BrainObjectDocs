@@ -42,7 +42,7 @@ Tracing is basically like structured logging, but …
 - A trace has two timestamps: a "begin" and an "end"
 - A trace know the ID of its `parentTraceSpanID`
 
-> NOTE: We should try to support the full set of the "**Open Telemetry**" concepts (for details see below)
+> NOTE: We should try to support the full set of the [**Open Telemetry**](#OpenTelemetry) concepts (for details see below)
 
 
 #### Main "tracing gotchas"
@@ -192,7 +192,7 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 
 
 
-#### OpenTelemetry
+#### OpenTelemetry <a name="OpenTelemetry"></a>
 
 … is a "standard" for tracing distributed systems during deployment.
 
