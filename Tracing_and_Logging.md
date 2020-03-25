@@ -42,7 +42,7 @@ Tracing is basically like structured logging, but …
 - A trace has two timestamps: a "begin" and an "end"
 - A trace know the ID of its `parentTraceSpanID`
 
-
+> NOTE: We should try to support the full set of the "**Open Telemetry**" concepts (for details see below)
 
 
 #### Main "tracing gotchas"
@@ -180,6 +180,8 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 #### Open Tracing
 
 "Vendor-neutral APIs and instrumentation for distributed tracing"
+
+(!) NOTE: Open Tracing has "morphed" into … OpenTelemetry (see below)
 
 - Home page: [https://opentracing.io](https://opentracing.io)
 - [https://opentracing.io/docs/supported-tracers/](https://opentracing.io/docs/supported-tracers/)
