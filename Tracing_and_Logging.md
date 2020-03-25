@@ -70,7 +70,7 @@ The idea so far is that:
     - and to which LoggingChannels or (parent? upstream?) LoggingFilter(s) it is passed along
 
 - `LoggingChannel`
-  - ensures proper serialization of LogEvent output to a single (storage)"stream"
+  - ensures proper serialization of `LogEvent` output to a single (storage)"stream"
   - have state (e.g. a ring buffer for incoming log events)
   - are thread safe
 
@@ -116,7 +116,7 @@ Here are some additional pointers to other projects which might be helpful for s
 - [https://docs.rs/tracing](https://docs.rs/tracing)
 - Source code: [https://github.com/tokio-rs/tracing](https://github.com/tokio-rs/tracing)
 - Design
-  - uses "subscribers for emitting traces"
+  - uses "`subscribers` for emitting traces"
     - support e.g OpenTelemetry
 
 
