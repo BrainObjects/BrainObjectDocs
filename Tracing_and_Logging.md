@@ -90,11 +90,11 @@ Here are some additional pointers to other projects which might be helpful for s
 
 #### os_signpost … in macOS
 
-- Documentation:
+- Documentation: [https://developer.apple.com/documentation/os/logging?language=objc](https://developer.apple.com/documentation/os/logging?language=objc)
 - Design:
   - low overhead
 - Articles:
-- ["Measuring performance with os_signpost"](https://www.donnywals.com/measuring-performance-with-os_signpost/), 2019-12
+  - ["Measuring performance with os_signpost"](https://www.donnywals.com/measuring-performance-with-os_signpost/), 2019-12
 
 
 #### Logging … in SwiftNIO
