@@ -157,3 +157,10 @@ So what are the key building blocks that have been provided by the WebObjeczs an
    - EOModeller
      - a GUI app to browse data sources
      - and to define object to storage mappings
+     
+     
+     
+     
+(!) NOTE: BrainObjects is NOT trying to be a rewrite of WebObjects. But there are lesses we did learn from this "ancient" web framework.
+
+One can and should also [learn from many of related projects…](Related_Projects.md) 
