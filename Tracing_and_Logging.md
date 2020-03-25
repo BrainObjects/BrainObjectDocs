@@ -169,6 +169,23 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
   - Maybe a "node_exporter" is a fairly trivial service to be a testbed for BrainObjects?
 
 
+#### Jaeger (Open Tracing)
+
+"open source, end-to-end distributed tracing"
+
+- Home page: [https://www.jaegertracing.io](https://www.jaegertracing.io)
+- Project was started at Uber
+
+#### Open Tracing
+
+"Vendor-neutral APIs and instrumentation for distributed tracing"
+
+- Home page: [https://opentracing.io](https://opentracing.io)
+- [https://opentracing.io/docs/supported-tracers/](https://opentracing.io/docs/supported-tracers/)
+- (+) interesting list of related projects (including trace visualizing)
+
+
+
 #### OpenTelemetry
 
 … is a "standard" for tracing distributed systems during deployment.
