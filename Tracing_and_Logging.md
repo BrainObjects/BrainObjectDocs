@@ -176,6 +176,7 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 - Home page: [https://www.jaegertracing.io](https://www.jaegertracing.io)
 - Project was started at Uber
 
+
 #### Open Tracing
 
 "Vendor-neutral APIs and instrumentation for distributed tracing"
@@ -183,6 +184,9 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 - Home page: [https://opentracing.io](https://opentracing.io)
 - [https://opentracing.io/docs/supported-tracers/](https://opentracing.io/docs/supported-tracers/)
 - (+) interesting list of related projects (including trace visualizing)
+- Design
+  - [https://opentracing.io/specification/](https://opentracing.io/specification/)
+    - explains the key concepts of a tracing `Span`
 
 
 
