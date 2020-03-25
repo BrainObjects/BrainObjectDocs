@@ -42,19 +42,19 @@ What do we want BrainObjects to provide … basically the same like
    - fine grained observability to support debugging and monitoring
    - … and to allow auto-tuning of the internal "focus engine"
    
-Besides the "brain" analogies listed above there are other "qualitites" to "techniques" that should be supported:
+Besides the "brain" analogies listed above there are other "qualities" to "techniques" that should be supported:
 
  - (L) = Object locking. In general locking is evil, but in few cases absolute necessity
  - (P) = Persistent queries, similar to the iCloudKit
    -  e.g. let a client know when the car drove more than 100,000km
  - (D) = Developer support
-   - test a server without the need for a real webserver (ala. WO direct connect)
+   - test a server without the need for a real web-server (like WO direct connect)
      - can provide IMG or other "static" resources
    - support rapid turnaround when it comes to handling resources
  - (A) = ACID transaction should be supported … but at the same time the server part should try to be stateless
    - … state is provided by building on top of reliable backend (storage) systems
    - if there is a need for "sessions", then they should naturally be able to life in a database
- - (Y) = Async-behavior … to keep the number of threads low and to prevent "blocking IO"
+ - (Y) = Async-behaviour … to keep the number of threads low and to prevent "blocking IO"
    
    
 #### What BrainObjects should NOT do
@@ -72,12 +72,12 @@ What are the building blocks that we might need:
 
  - Configuration
    - basically something like NSUserDefaults … to support deployment presents
-   - maybe support for etcd or other "distributed configuration" repositories might be useful
+   - maybe support for `etcd` or other "distributed configuration" repositories might be useful
  - Future + Promise
    - As building blocks for async interaction
      - maybe the SwiftNIO concepts could be reused
      - maybe some Distributed Objects (RPC) concepts would be helpful (like in FoundationDB)
-     - more for "inter-process-large scale async" behavior … not for "intense compute"
+     - more for "inter-process-large scale async" behaviour … not for "intense compute"
  - Operations
    - define one (big) processing step
    - could be "made persistent" and "tracked" in a dedicated "BrainObjects store"
@@ -97,7 +97,7 @@ What are the building blocks that we might need:
    - a wrapper which provides a standard way to understand the state of related backend systems 
      - … online, offline, storage limites etc
  - TuningEngine
-   - an "app internal" scheduling and parameter tuning engine what will optimize the entire operation processing (pipelines)
+   - an "app internal" scheduling and parameter tuning engine what will optimise the entire operation processing (pipelines)
    - … different goals might be: reduce RAM, ensure constant latency, …
  - [Tracing and Logging](Tracing_and_Logging.md)
    - .. should also include:
@@ -137,7 +137,7 @@ So what are the key building blocks that have been provided by the WebObjeczs an
    - Sessions
      - to cache data related to a specific client
    - Actions
-     - to track the history of previos actions 
+     - to track the history of previous actions 
    - DirectActions
      - to provide "stateless" interactions
    - HTML Templates
@@ -146,9 +146,9 @@ So what are the key building blocks that have been provided by the WebObjeczs an
      - to support deployment
  - EOF had …
    - EditingContext
-     - for collecting uncommited modifications
+     - for collecting uncommitted modifications
      - for providing undo-and-redo features
-     - to synchronize changes with other contexts to present a consistent view (to the user)
+     - to synchronise changes with other contexts to present a consistent view (to the user)
      - for caching data from a remote source
      - to understand which storage is responsible for which data
        - so you can "commit" into multiple backends at the same time
