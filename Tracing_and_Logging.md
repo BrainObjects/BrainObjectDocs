@@ -93,6 +93,8 @@ Here are some additional pointers to other projects which might be helpful for s
 - Documentation:
 - Design:
   - low overhead
+- Articles:
+- ["Measuring performance with os_signpost"](https://www.donnywals.com/measuring-performance-with-os_signpost/), 2019-12
 
 
 #### Logging … in SwiftNIO
@@ -106,6 +108,17 @@ Here are some additional pointers to other projects which might be helpful for s
 - (-) Con
 
 
+#### Wayfair "Jaeger" … Open Tracing for iOS (Swift)
+
+There is a Swift implementation to support "Open Tracing"
+
+- Code: [https://github.com/wayfair/jaeger-swift/tree/master/Example/jaegerMediator](https://github.com/wayfair/jaeger-swift/tree/master/Example/jaegerMediator)
+- Articles:
+  - [https://tech.wayfair.com/2019/05/open-tracing-for-ios-a-performance-tool-for-everyone/](https://tech.wayfair.com/2019/05/open-tracing-for-ios-a-performance-tool-for-everyone/), 2019-05
+- (?) Unclear
+  - it seems like "parentSpanIPs" need to be propagated by hand
+  
+  
 
 ### Related frameworks in other programming language ecosystems
 
