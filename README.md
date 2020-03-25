@@ -99,12 +99,14 @@ What are the building blocks that we might need:
  - TuningEngine
    - an "app internal" scheduling and parameter tuning engine what will optimize the entire operation processing (pipelines)
    - … different goals might be: reduce RAM, ensure constant latency, …
- - Statistics
-   - to collect the performance stats for all building blocks
-   - should ensure that this part does NOT become a blocking (single point of) failure
- - InstrumentationPlugins
-   - to export the performance stats to different monitoring tools
-     - e.g. Prometheus, Apple Instruments, …
+ - [Tracing and Logging](Tracing_and_Logging.md)
+   - .. should also include:
+   - Statistics
+     - to collect the performance stats for all building blocks
+     - should ensure that this part does NOT become a blocking (single point of) failure
+   - InstrumentationPlugins
+     - to export the performance stats (traces) to different monitoring tools
+       - e.g. Prometheus, Apple Instruments, OpenTelemetry …
    
    
 #### Related Apps
