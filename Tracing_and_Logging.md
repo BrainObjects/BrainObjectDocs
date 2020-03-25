@@ -1,3 +1,5 @@
+{:toc}
+
 # BrainObjects … need Tracing and Logging
 
 One of the key problems in deployments is to "debug" and "optimize" a running system. Real production deployments behave differently than development environments.
