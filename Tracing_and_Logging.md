@@ -40,19 +40,19 @@ Our main design goals are:
 Tracing is basically like structured logging, but …
 
 - A trace has two timestamps: a "begin" and an "end"
-- A trace know the ID of its parentTraceSpanID
+- A trace know the ID of its `parentTraceSpanID`
 
 
 
 
 #### Main "tracing gotchas"
 
-The main problem is … How do "hand down" the parentTraceSpanID?
+The main problem is … How do "hand down" the `parentTraceSpanID`?
 
 A trivial solution would be: "Just do it by hand"
 
 - (+) Pro
-  - this is easy to implement. Simply put a "parentSpanID" variable into every strict/class that should perform tracing and set it to the "correct" value when creating that objects.
+  - this is easy to implement. Simply put a `parentTraceSpanID` variable into every strict/class that should perform tracing and set it to the "correct" value when creating that objects.
 - (-) Con
   - in multithreaded systems this can very easily product totally incorrect "traces" if people do not pay attanetion and fully understand what they are doing.
   
@@ -62,21 +62,21 @@ A trivial solution would be: "Just do it by hand"
 
 The idea so far is that:
 
-- LoggingFilters
+- `LoggingFilters`
   - are stateless .. and (therefore) thread safe
   - know the filter rules
     - and have a highly optimized way of applying (the most common) filters
   - decide if a "LogItem/TraceItem" is processed
     - and to which LoggingChannels or (parent? upstream?) LoggingFilter(s) it is passed along
 
-- LoggingChannel
+- `LoggingChannel`
   - ensures proper serialization of LogEvent output to a single (storage)"stream"
   - have state (e.g. a ring buffer for incoming log events)
   - are thread safe
 
 What else do we need?
 
-- LogItem ? LogEvent ? LogEntry ?
+- `LogItem` ? `LogEvent` ? `LogEntry` ?
   - the "immutable" payload of a log event
 
 
