@@ -6,6 +6,9 @@ This is why "Tracing and Logging" must be a key component of BrainObjects.
 
 Since it will be heavily used all over the place it must be highly optimized to ensure low overhead … especially in times when it is actively used.
 
+Most deployed real life software systems also depend on domain specific persistent logging (e.g. user session creation and termination, security violations, loading of external data structures, up/down-loading of files, etc.). BrainObjects should supply the core infrastructure for making the development of domain specific loggers a trivial task.
+
+Finally BrainObject's tracing and logging infrastructure should support logging channels compatible with Apple's os\_log_xxx and os\_activity_xxx APSs in order to make it usable by Apple's development and performance tools.
 
 ## Tracing Design Ideas
 
@@ -217,9 +220,14 @@ Matrix is a "realtime chat client" protocol.
 - [the related page for the Matrix event](https://matrix.org/blog/2019/02/04/matrix-at-fosdem-2019/)
 
 
-
-
-
+### Apple WWDC sessions about os\_log and os\_activity
+- WWDC 2014
+	- #714 Fix bugs faster using activity tracing
+- WWDC 2016
+	- #721 Unified logging and activity tracing
+- WWDC 2018
+	- #405 Measuring performance using logging
+	- #410 Creating custom instruments
 
 
 …
