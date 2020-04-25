@@ -1,14 +1,16 @@
 # BrainObjects … need Tracing and Logging
 
-One of the key problems in deployments is to "debug" and "optimize" a running system. Real production deployments behave differently than development environments.
+One of the key problems in deployments is to "debug" and "optimise" a running system. Real production deployments behave differently than development environments.
 
 This is why "Tracing and Logging" must be a key component of BrainObjects.
 
-Since it will be heavily used all over the place it must be highly optimized to ensure low overhead … especially in times when it is actively used.
+Since it will be heavily used all over the place it must be highly optimizsd to ensure low overhead … especially in times when it is actively used.
 
 Most deployed real life software systems also depend on domain specific persistent logging (e.g. user session creation and termination, security violations, loading of external data structures, up/down-loading of files, etc.). BrainObjects should supply the core infrastructure for making the development of domain specific loggers a trivial task.
 
-Finally BrainObject's tracing and logging infrastructure should support logging channels compatible with Apple's os\_log_xxx and os\_activity_xxx APSs in order to make it usable by Apple's development and performance tools.
+Finally BrainObject's tracing and logging infrastructure should support logging channels compatible with Apple's `os_log_xxx` and `os_activity_xxx` APSs in order to make it usable by Apple's development and performance tools.
+
+**Note:** Logging is highly reusable low-level functionality. Therefore, _BrainObjects_ will use external logger and implement additional functionality required by the framework. Currently the logging will be based on _SoftwareEtude_'s [logger](git@github.com:tuparev/SoftwareEtudes.git)
 
 ## Tracing Design Ideas
 
