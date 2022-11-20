@@ -32,13 +32,13 @@ There seem to be a lot of similar concepts in SwiftNIO.
 There are some projects in the context of the SwiftServer group which might be interesting to follow:
 
 - Logging
-  - [https://forums.swift.org/t/feedback-server-logging-api-with-revisions/19375](https://forums.swift.org/t/feedback-server-logging-api-with-revisions/19375)
+	- [https://forums.swift.org/t/feedback-server-logging-api-with-revisions/19375](https://forums.swift.org/t/feedback-server-logging-api-with-revisions/19375)
 - Metrics
-  - [https://forums.swift.org/t/metrics/19353](https://forums.swift.org/t/metrics/19353)
-  - there is a Prometheus "exporter"
-    - (-) but the code looks a little strange (no support for multiple threads)
-    - Prometheus is moving to … OpenMetrics ([https://openmetrics.io](https://openmetrics.io))
-      - ? but that project shows very little activity in 2019?
+	- [https://forums.swift.org/t/metrics/19353](https://forums.swift.org/t/metrics/19353)
+	- there is a Prometheus "exporter"
+		- (-) but the code looks a little strange (no support for multiple threads)
+		- Prometheus is moving to … OpenMetrics ([https://openmetrics.io](https://openmetrics.io))
+			- ? but that project shows very little activity in 2019?
 
 
 
@@ -56,10 +56,10 @@ Here are some additional pointers to other projects which might be helpful for s
 
 - Source code: [https://github.com/Alamofire/Alamofire](https://github.com/Alamofire/Alamofire)
 - Design
-  - "Alamofire is an HTTP networking library written in Swift"
+	- "Alamofire is an HTTP networking library written in Swift"
 - (+) Pro
 - (?) Unclear
-  - ?Tomi thinks this is somewhat like CococaHTTPServer
+	- ?Tomi thinks this is somewhat like CococaHTTPServer
 
 - (-) Con
 
@@ -153,6 +153,17 @@ Here are some additional pointers to other projects which might be helpful for s
 - (?) Unclear
 - (-) Con
 
+
+#### SwiftLogging (server framework)
+- Source code: [https://github.com/apple/swift-log/](https://github.com/apple/swift-log)
+- Design
+	- LoggingSystem
+		- LoggingSystem.bootstrap(MyLogHandler.init)
+	- Logger
+		- logger[metadataKey: "some-payload"] = "payloadString"
+		- logger.info( "some message")
+	- LogHandler (protocol)
+		- defines the backend API
 
 #### SwiftEngine (server framework)
 
