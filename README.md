@@ -73,7 +73,7 @@ Another way to define what it should do … is to figure out what it should NOT 
 - Try NOT to be a rewrite of Vapor
     
      
-(1) NOTE: But there are important lessons we did learn from this "ancient" WebObjects framework.
+> **NOTE (1):** But there are important lessons we did learn from this "ancient" WebObjects framework.
 
 
 
