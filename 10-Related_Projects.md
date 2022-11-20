@@ -399,9 +399,7 @@ In order to test BrainObjects (and ensure that it is not too narrowly focused on
 
 #### Redshift
 
-- is what ?? seems similar to ## Continue reading ...
-
-One can and should also [learn from many of related projects.](10-Related_Projects.md) Presto?
+- is what ?? seems similar to Presto?
 
 
 
