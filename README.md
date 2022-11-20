@@ -1,4 +1,4 @@
-# BrainObjects - Design Documentation and Ideas
+# BrainObjects - Design documentation and ideas
 
 One of the main motivations behind BrainObjects is the search for a new WebObjects-EOF System.
 

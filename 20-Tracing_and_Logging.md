@@ -1,4 +1,4 @@
-# BrainObjects … need Tracing and Logging
+# BrainObjects – The need for tracing and logging
 
 One of the key problems in deployments is to "debug" and "optimise" a running system. Real production deployments behave differently than development environments.
 
@@ -11,6 +11,7 @@ Most deployed real life software systems also depend on domain specific persiste
 Finally BrainObject's tracing and logging infrastructure should support logging channels compatible with Apple's `os_log_xxx` and `os_activity_xxx` APSs in order to make it usable by Apple's development and performance tools.
 
 **Note:** Logging is highly reusable low-level functionality. Therefore, _BrainObjects_ will use external logger and implement additional functionality required by the framework. Currently the logging will be based on _SoftwareEtude_'s [logger](git@github.com:tuparev/SoftwareEtudes.git)
+
 
 ## Tracing Design Ideas
 
@@ -232,15 +233,15 @@ Matrix is a "realtime chat client" protocol.
 
 ### Apple WWDC sessions about os\_log and os\_activity
 - WWDC 2014
-	- #714 Fix bugs faster using activity tracing
+	- 714 Fix bugs faster using activity tracing
 - WWDC 2016
-	- #721 Unified logging and activity tracing
+	- 721 Unified logging and activity tracing
 - WWDC 2018
-	- #405 Measuring performance using logging
-	- #410 Creating custom instruments
+	- 405 Measuring performance using logging
+	- 410 Creating custom instruments
 
 
-…
+
  
 
 
