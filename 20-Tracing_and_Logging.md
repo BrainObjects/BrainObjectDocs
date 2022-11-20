@@ -42,7 +42,7 @@ Tracing is basically like structured logging, but …
 - A trace has two timestamps: a "begin" and an "end"
 - A trace know the ID of its `parentTraceSpanID`
 
-> NOTE: We should try to support the full set of the [**Open Telemetry**](#OpenTelemetry) concepts (for details see below)
+> **Note:** We should try to support the full set of the [**Open Telemetry**](#OpenTelemetry) concepts (for details see below)
 
 
 #### Main "tracing gotchas"
@@ -62,22 +62,30 @@ A trivial solution would be: "Just do it by hand"
 
 The idea so far is that:
 
-- `LoggingFilters`
-  - are stateless .. and (therefore) thread safe
-  - know the filter rules
-    - and have a highly optimized way of applying (the most common) filters
-  - decide if a "LogItem/TraceItem" is processed
-    - and to which LoggingChannels or (parent? upstream?) LoggingFilter(s) it is passed along
+- `LogEvent` ? `LogItem` ? `LogEntry` ?
+	- the "immutable" payload of a log event
+	- `timestamp`
+	- `severity`
+	- `taskId`
+	- `parentTaskId`
+	- privacy … who to handle that?
+- `Logger`
+	- generates `LogEvent`s
+	- uses `LoggingFilter` ?
+		- are stateless .. and (therefore) thread safe
+		- know the filter rules
+	    - and have a highly optimized way of applying (the most common) filters
+		- decide if a "LogItem/TraceItem" is processed
+		- and to which LoggingChannels or (parent? upstream?) LoggingFilter(s) it is passed along
 
 - `LoggingChannel`
-  - ensures proper serialization of `LogEvent` output to a single (storage)"stream"
-  - have state (e.g. a ring buffer for incoming log events)
-  - are thread safe
+	- ensures proper serialization of `LogEvent` output to a single (storage)"stream"
+	- have state (e.g. a ring buffer for incoming log events)
+	- are thread safe
 
 What else do we need?
 
-- `LogItem` ? `LogEvent` ? `LogEntry` ?
-  - the "immutable" payload of a log event
+
 
 
 ## Ressources
