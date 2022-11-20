@@ -10,7 +10,7 @@ Most deployed real life software systems also depend on domain specific persiste
 
 Finally BrainObject's tracing and logging infrastructure should support logging channels compatible with Apple's `os_log_xxx` and `os_activity_xxx` APSs in order to make it usable by Apple's development and performance tools.
 
-> **NOTE:** Logging is highly reusable low-level functionality. Therefore, _BrainObjects_ will use external logger and implement additional functionality required by the framework. Currently the logging will be based on _SoftwareEtude_'s logger (<git@github.com:tuparev/SoftwareEtudes.git>)
+> **NOTE:** Logging is a highly reusable low-level functionality. Therefore, _BrainObjects_ will use external logger and implement additional functionality required by the framework. Currently the logging will be based on _SoftwareEtude_'s logger (<git@github.com:tuparev/SoftwareEtudes.git>)
 
 
 ## Tracing Design Ideas
