@@ -1,5 +1,12 @@
 # BrainObjects - Related projects
 
+The goal of this project is not to "reinvent the flat tyre". Therefore we try to collect assessments about many other software projects in order to gain some insight into:
+
+- "What works … and what (most likely) does not".
+
+
+**Disclaimer:** Many of the following assessments are not "first hand experiences" but are often based on presentations, documentation or "lunchtime chats", all collected over many years. So we might say things which are are based on old versions, or simply are incorrect interpretations. Any feedback which will help us to reach a more precise understanding is appreciated. 
+
 
 
 ## SwiftNIO relationship
@@ -44,9 +51,9 @@ There are some projects in the context of the SwiftServer group which might be i
 
 
 
-## Ressources)
+## Ressources
 
-Here are some additional pointers to other projects which might be helpful for some of the BrainObjects ideas.
+Here are some additional pointers to other projects which might be helpful for some of the BrainObjects ideas. The goal is not to integrate or reuse those projects directly but rather to learn from some of their  design ideas.
 
 
 ### Related and interesting "Swift frameworks"
@@ -407,4 +414,6 @@ One can and should also [learn from many of related projects.](10-Related_Projec
 ## Continue reading ...
 
 … about why BrainObjects need [tracing and logging.](20-Tracing_and_Logging.md) 
+
+
 
