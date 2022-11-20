@@ -68,9 +68,9 @@ We might need:
 
 - A load balancing "Solution"
   - something like "WOAdaptor" + "WODaemon"?
-- A Deployment Monitor
+- A Deployment Monitor (Dashboard)
   - which could visualize the processing queues
-  - which could show the cluster setup
+  - which could show the cluster setup … include "external" services (databases etc.)
 - A Deployment (database?) Debugger
   - wo view the state of the backend systems (maybe this could be part of the normal "Dashboard"?)
 - A Backend Browser
