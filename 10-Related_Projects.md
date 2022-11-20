@@ -5,7 +5,7 @@ The goal of this project is not to "reinvent the flat tyre". Therefore we try to
 - "What works … and what (most likely) does not".
 
 
-**Disclaimer:** Many of the following assessments are not "first hand experiences" but are often based on presentations, documentation or "lunchtime chats", all collected over many years. So we might say things which are are based on old versions, or simply are incorrect interpretations. Any feedback which will help us to reach a more precise understanding is appreciated. 
+> **DISCLAIMER:** Many of the following assessments are not "first hand experiences" but are often based on presentations, documentation or "lunchtime chats", all collected over many years. So we might say things which are are based on old versions, or simply are incorrect interpretations. Any feedback which will help us to reach a more precise understanding is appreciated. 
 
 
 
@@ -46,8 +46,6 @@ There are some projects in the context of the SwiftServer group which might be i
 		- (-) but the code looks a little strange (no support for multiple threads)
 		- Prometheus is moving to … OpenMetrics (<https://openmetrics.io>)
 			- ? but that project shows very little activity in 2019?
-
-
 
 
 
@@ -214,9 +212,7 @@ Here are some additional pointers to other projects which might be helpful for s
   - They also have few tutorials on Vapor:
     - On UI template engine Leaf: <https://www.raywenderlich.com/1002448-templating-vapor-applications-with-leaf> and <https://www.raywenderlich.com/1004734-beautifying-templated-websites-with-leaf-and-bootstrap>
     - Testing: <https://www.raywenderlich.com/1002044-testing-in-vapor>
-
-- Paul Hudson at https://www.hackingwithswift.com has books on Kitura and Vapor
-
+- Paul Hudson at <https://www.hackingwithswift.com> has books on Kitura and Vapor
 
 
 
@@ -318,9 +314,6 @@ Matrix is a "realtime chat client" protocol.
 
 
 
-
-
-
 ### Related and interesting "(communication) transport" technologies
 
 In order to test BrainObjects (and ensure that it is not too narrowly focused on HTTP) we might take a look at some other communication protocols.
@@ -337,7 +330,6 @@ In order to test BrainObjects (and ensure that it is not too narrowly focused on
 - (?) Unclear
   - so far based on UDP .. but a TCP version should also be specified soon: <https://tools.ietf.org/html/rfc8323#section-9>
   
-  
 
 #### DDS - Data Distribution Services
 
@@ -352,8 +344,7 @@ In order to test BrainObjects (and ensure that it is not too narrowly focused on
   - has a well defined set of "Quality of Services" classes for timeout, failure etc handling
 - (-) Con
   - very complicated to implement
-  
-
+ 
 
 #### JSON-RPC over WebSockets
 
@@ -367,7 +358,6 @@ In order to test BrainObjects (and ensure that it is not too narrowly focused on
   - <https://en.wikipedia.org/wiki/JSON-RPC>
 
 
-
 #### MQTT
 
 … is a simple binary protocol from IBM for "Message Queuing Telemetry Transport"
@@ -378,8 +368,6 @@ In order to test BrainObjects (and ensure that it is not too narrowly focused on
   - low overhead binary protocol
   - payload agnostic
   - focus on "message passing" .. in the IoT sensor context
-
-
 
 
 #### XMPP
