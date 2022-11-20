@@ -111,7 +111,7 @@ So what are the key building blocks that have been provided by the WebObjeczs an
      - a GUI app to browse data sources
      - and to define object to storage mappings
      
-(!) NOTE: BrainObjects is NOT trying to be a rewrite of WebObjects. But there are lesses we did learn from this "ancient" web framework.
+> **NOTE:** BrainObjects is NOT trying to be a rewrite of WebObjects. But there are lesses we did learn from this "ancient" web framework.
 
 
 ## Continue reading ...
