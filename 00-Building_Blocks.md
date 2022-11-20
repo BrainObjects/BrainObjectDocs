@@ -1,6 +1,6 @@
 # BrainObjects - Technical building blocks
 
-What are the building blocks that we might need?
+What are the actual building blocks that we might need?
 
 
 ## In the Framework
