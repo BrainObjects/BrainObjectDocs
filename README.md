@@ -59,8 +59,8 @@ Besides the "brain" analogies listed above there are other characteristics of "t
    - … state is provided by building on top of reliable backend storage systems
    - if there is a need for "sessions", then they should naturally be able to be persistent too
  - (Y) = Async-behaviour … to keep the number of threads low and to prevent "blocking IO"
-   - e.g. for large building blocks via operation pipelines with clearly defined handover conventions (IO queues)
-   - e.g. for small building blocks async-wait might be used as well
+   - for large building blocks e.g. via operation pipelines with clearly defined handover conventions (IO queues)
+   - for small building blocks e.g. async-wait might be used as well
    
    
    
