@@ -70,7 +70,7 @@ Another way to define what it should do … is to figure out what it should NOT 
 
 - Try NOT to be a data store
 - Try NOT to be a rewrite of WebObjects (1)
-- Try NOT to be a rewrite of Vapour
+- Try NOT to be a rewrite of Vapor
     
      
 (1) NOTE: But there are important lessons we did learn from this "ancient" WebObjects framework.
