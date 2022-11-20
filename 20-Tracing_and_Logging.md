@@ -4,13 +4,13 @@ One of the key problems in deployments is to "debug" and "optimise" a running sy
 
 This is why "Tracing and Logging" must be a key component of BrainObjects.
 
-Since it will be heavily used all over the place it must be highly optimizsd to ensure low overhead … especially in times when it is actively used.
+Since it will be heavily used all over the place it must be highly optimized to ensure low overhead … especially in times when it is actively used.
 
 Most deployed real life software systems also depend on domain specific persistent logging (e.g. user session creation and termination, security violations, loading of external data structures, up/down-loading of files, etc.). BrainObjects should supply the core infrastructure for making the development of domain specific loggers a trivial task.
 
 Finally BrainObject's tracing and logging infrastructure should support logging channels compatible with Apple's `os_log_xxx` and `os_activity_xxx` APSs in order to make it usable by Apple's development and performance tools.
 
-**Note:** Logging is highly reusable low-level functionality. Therefore, _BrainObjects_ will use external logger and implement additional functionality required by the framework. Currently the logging will be based on _SoftwareEtude_'s [logger](git@github.com:tuparev/SoftwareEtudes.git)
+> **NOTE:** Logging is highly reusable low-level functionality. Therefore, _BrainObjects_ will use external logger and implement additional functionality required by the framework. Currently the logging will be based on _SoftwareEtude_'s logger (<git@github.com:tuparev/SoftwareEtudes.git>)
 
 
 ## Tracing Design Ideas
@@ -48,7 +48,7 @@ Tracing is basically like structured logging, but …
 - A trace has two timestamps: a "begin" and an "end"
 - A trace know the ID of its `parentTraceSpanID`
 
-> **Note:** We should try to support the full set of the [**Open Telemetry**](#OpenTelemetry) concepts (for details see below)
+> **NOTE:** We should try to support the full set of the [**Open Telemetry**](#OpenTelemetry) concepts (for details see below)
 
 
 #### Main "tracing gotchas"
@@ -104,11 +104,11 @@ Here are some additional pointers to other projects which might be helpful for s
 
 #### os_signpost … in macOS
 
-- Documentation: [https://developer.apple.com/documentation/os/logging?language=objc](https://developer.apple.com/documentation/os/logging?language=objc)
+- Documentation: <https://developer.apple.com/documentation/os/logging?language=objc>
 - Design:
   - low overhead
 - Articles:
-  - ["Measuring performance with os_signpost"](https://www.donnywals.com/measuring-performance-with-os_signpost/), 2019-12
+  - "Measuring performance with os_signpost", <https://www.donnywals.com/measuring-performance-with-os_signpost/>, 2019-12
 
 
 #### Logging … in SwiftNIO
@@ -126,9 +126,9 @@ Here are some additional pointers to other projects which might be helpful for s
 
 There is a Swift implementation to support "Open Tracing"
 
-- Code: [https://github.com/wayfair/jaeger-swift/tree/master/Example/jaegerMediator](https://github.com/wayfair/jaeger-swift/tree/master/Example/jaegerMediator)
+- Code: <https://github.com/wayfair/jaeger-swift/tree/master/Example/jaegerMediator>
 - Articles:
-  - [https://tech.wayfair.com/2019/05/open-tracing-for-ios-a-performance-tool-for-everyone/](https://tech.wayfair.com/2019/05/open-tracing-for-ios-a-performance-tool-for-everyone/), 2019-05
+  - <https://tech.wayfair.com/2019/05/open-tracing-for-ios-a-performance-tool-for-everyone/>, 2019-05
 - (?) Unclear
   - it seems like "parentSpanIPs" need to be propagated by hand
   
@@ -140,8 +140,8 @@ There is a Swift implementation to support "Open Tracing"
 
 … this is one of the (default?) tracing subsystems for Rust processes. It originated within the "Tokio" async-await runtime crate.
 
-- [https://docs.rs/tracing](https://docs.rs/tracing)
-- Source code: [https://github.com/tokio-rs/tracing](https://github.com/tokio-rs/tracing)
+- <https://docs.rs/tracing>
+- Source code: <https://github.com/tokio-rs/tracing>
 - Design
   - uses "`subscribers` for emitting traces"
     - support e.g OpenTelemetry
@@ -151,9 +151,9 @@ There is a Swift implementation to support "Open Tracing"
 
 … this seems to be one of the default logging subsystems for node.js server processes.
 
-- [https://www.npmjs.com/package/bunyan](https://www.npmjs.com/package/bunyan)
+- <https://www.npmjs.com/package/bunyan>
 - Artikles
-  - [https://nodejs.org/en/blog/module/service-logging-in-json-with-bunyan/](https://nodejs.org/en/blog/module/service-logging-in-json-with-bunyan/)
+  - <https://nodejs.org/en/blog/module/service-logging-in-json-with-bunyan/>
 
 
 
@@ -173,9 +173,10 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 
 ### Related and interesting "cluster monitoring" technologies
 
+
 #### Prometheus + Graphana (cluster monitoring + alerting + HTML dashboard)
 
-- Home page: [https://prometheus.io](https://prometheus.io)
+- Home page: <https://prometheus.io>
 - (+) Pro
   - On of the (most?) common toolsets in Linux cluster monitoring
   - Many services offer "automated" exports of "metrics" following the Prometheus naming schema
@@ -187,7 +188,7 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 
 "open source, end-to-end distributed tracing"
 
-- Home page: [https://www.jaegertracing.io](https://www.jaegertracing.io)
+- Home page: <https://www.jaegertracing.io>
 - Project was started at Uber
 
 
@@ -195,13 +196,13 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 
 "Vendor-neutral APIs and instrumentation for distributed tracing"
 
-(!) NOTE: Open Tracing has "morphed" into … OpenTelemetry (see below)
+> **NOTE:** Open Tracing has "morphed" into … OpenTelemetry (see below)
 
-- Home page: [https://opentracing.io](https://opentracing.io)
-- [https://opentracing.io/docs/supported-tracers/](https://opentracing.io/docs/supported-tracers/)
+- Home page: <https://opentracing.io>
+- <https://opentracing.io/docs/supported-tracers/>
 - (+) interesting list of related projects (including trace visualizing)
 - Design
-  - [https://opentracing.io/specification/](https://opentracing.io/specification/)
+  - <https://opentracing.io/specification/>
     - explains the key concepts of a tracing `Span`
 
 
@@ -210,8 +211,8 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 
 … is a "standard" for tracing distributed systems during deployment.
 
-- Home page: [https://opentelemetry.io](https://opentelemetry.io)
-- Presentation at FOSDEM 2020 … [https://fosdem.org/2020/schedule/event/beam_opentelemetry_xkcd_927_success_story/](https://fosdem.org/2020/schedule/event/beam_opentelemetry_xkcd_927_success_story/)
+- Home page: <https://opentelemetry.io>
+- Presentation at FOSDEM 2020 … <https://fosdem.org/2020/schedule/event/beam_opentelemetry_xkcd_927_success_story/>
 - Design
   - seems to have originated in the Erlang community
   - based on context tracing .. looks very similar to what Apple is doing for GCD debugging
@@ -227,11 +228,12 @@ dtrace key comppnent of modern operating systems. It originated at Sun (for Sola
 Matrix is a "realtime chat client" protocol.
 
 - The "chat" system comes with a test system where communication networks can be visually created … and the message flow can be "watched in slow motion" for debugging purposes"
-- [https://youtu.be/DZBvy4abB1o](https://youtu.be/DZBvy4abB1o) .. is a video where one can see the feature
-- [the related page for the Matrix event](https://matrix.org/blog/2019/02/04/matrix-at-fosdem-2019/)
+- <https://youtu.be/DZBvy4abB1o> .. is a video where one can see the feature
+- the related page for the Matrix event: <https://matrix.org/blog/2019/02/04/matrix-at-fosdem-2019/>
 
 
 ### Apple WWDC sessions about os\_log and os\_activity
+
 - WWDC 2014
 	- 714 Fix bugs faster using activity tracing
 - WWDC 2016
