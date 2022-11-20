@@ -1,4 +1,4 @@
-# BrainObjects … and related Projects
+# BrainObjects - Related projects
 
 
 
@@ -392,7 +392,9 @@ WebSockets is a common protocol in the JavaScript Web Development world. It basi
 
 #### Redshift
 
-- is what ?? seems similar to Presto?
+- is what ?? seems similar to ## Continue reading ...
+
+One can and should also [learn from many of related projects.](10-Related_Projects.md) Presto?
 
 
 
@@ -401,4 +403,8 @@ WebSockets is a common protocol in the JavaScript Web Development world. It basi
 …
  
 
+
+## Continue reading ...
+
+… about why BrainObjects need [tracing and logging.](20-Tracing_and_Logging.md) 
 
