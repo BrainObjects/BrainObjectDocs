@@ -5,6 +5,7 @@ One of the main motivations behind BrainObjects is the search for a new WebObjec
 The BrainObjects project is located at: <https://www.github.com/BrainObjects/BrainObjectDocs>
 
 
+
 ## Core Design Ideas
 
 What does a Brain do?
@@ -63,7 +64,7 @@ Besides the "brain" analogies listed above there are other characteristics of "t
    
    
    
-#### What BrainObjects should NOT do
+### What BrainObjects should NOT do
 
 Another way to define what it should do … is to figure out what it should NOT (try to) do
 
