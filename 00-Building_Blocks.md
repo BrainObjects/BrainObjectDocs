@@ -25,7 +25,7 @@ What are the actual building blocks that we might need?
 	- is an "immutable" description of a job `ProcessingPipeline`
 	- can be defined in the `Configuration`
 - `ProcessingPipeline`
-	 - would be a predefine chain of "living" (preallocated an reuseable) `Operation`s
+	 - would be a predefine chain of "living" (preallocated and reuseable) `Operation`s
 - `Operation`
 	- define one (big) processing step
 	- could be "made persistent" and "tracked" in a dedicated "BrainObjects store"
@@ -37,7 +37,7 @@ What are the actual building blocks that we might need?
    - which maintain a list of operations and schedule them based on some rules (priorities, dependencies)
    - which keep track of their performance
  - OperationPersistencyService
-   - to ensure that a "job" can not get lost and that it will 
+   - to ensure that a "job" can not get lost and that it will continue after possible crash
 - `SwiftNIORequestDispatcher`
 	- map "HTTP routes" to the root `Operation` of known `ProcessingPipeline`
 	- which are are identified by a `WorkflowDefinition`
@@ -52,11 +52,11 @@ What are the actual building blocks that we might need?
  - TuningEngine
    - an "app internal" scheduling and parameter tuning engine what will optimise the entire operation processing (pipelines)
    - … different goals might be: reduce RAM, ensure constant latency, …
- - [Tracing and Logging](Tracing_and_Logging.md)
+ - [Tracing and Logging](20-Tracing_and_Logging.md)
    - .. should also include:
    - Statistics
      - to collect the performance stats for all building blocks
-     - should ensure that this part does NOT become a blocking (single point of) failure
+     - should ensure that this part does NOT become a blocking single point of failure
    - InstrumentationPlugins
      - to export the performance stats (traces) to different monitoring tools
        - e.g. Prometheus, Apple Instruments, OpenTelemetry …
@@ -84,8 +84,8 @@ We might need:
 So what are the key building blocks that have been provided by the WebObjeczs and EOF frameworks
 
  - WOAdaptor + WOMonitor
-   - allows load balancing .. and to "phase out" running instances .. e.g. for "smooth version migration"
-   - a "GUI" (HTML) dashboard with interactive "on-off-etc" buttons?
+   - allows load balancing and to "phase out" running instances ... e.g. for "smooth version migration"
+   - a "GUI" (HTML) dashboard with interactive "on-off-etc" buttons (WOMonitor)
  - WebObjects had …
    - Sessions
      - to cache data related to a specific client
@@ -93,8 +93,9 @@ So what are the key building blocks that have been provided by the WebObjeczs an
      - to track the history of previous actions 
    - DirectActions
      - to provide "stateless" interactions
-   - HTML Templates
+   - HTML and custom (e.g. JSON, XML) Templates
      - to allow building responses out of predefine blocks
+     - only HTML is well supported
    - WOMonitor + Load Balancing
      - to support deployment
  - EOF had …
@@ -110,6 +111,8 @@ So what are the key building blocks that have been provided by the WebObjeczs an
    - EOModeller
      - a GUI app to browse data sources
      - and to define object to storage mappings
+   - WOBulder
+     - A GUI app to create HTML templates
      
 > **NOTE:** BrainObjects is NOT trying to be a rewrite of WebObjects. But there are lesses we did learn from this "ancient" web framework.
 

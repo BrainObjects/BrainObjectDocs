@@ -15,7 +15,7 @@ Is there something that we can learn or "copy" from SwiftNIO?
 
 The SwiftNIO framework basically targets:
 
- - a modern access to sockets … and lot level byte transport protocols
+ - a modern access to sockets … and low level byte transport protocols
 
 As the core design building blocks it is (seems to be?) providing:
 
@@ -33,7 +33,7 @@ Should we call it BraiNIO ? :-)
 
 There seem to be a lot of similar concepts in SwiftNIO.
 
-- BrainObjects might need to provide "subclasses" of key SWiftNIO objects in or to introduce the "instrumentation" capabilities for the NIO Pipelines
+- BrainObjects might need to provide "subclasses" of key SwiftNIO objects in or to introduce the "instrumentation" capabilities for the NIO Pipelines
 - Maybe the SwiftNIO APIs for channels and pipelines are good … so BrainObjects could reuse the APIs?
 
 There are some projects in the context of the SwiftServer group which might be interesting to follow:
@@ -65,6 +65,7 @@ Here are some additional pointers to other projects which might be helpful for s
 - (+) Pro
 - (?) Unclear
 	- ?Tomi thinks this is somewhat like CococaHTTPServer
+	- ?Georg thinks with the introduction of the new async/awate HTTPSession APIs AF is completely obsolete.
 
 - (-) Con
 
@@ -114,6 +115,7 @@ Here are some additional pointers to other projects which might be helpful for s
   - Originated at IBM .. is that a good or bad sign?
   - What does it do? Is is really just "routing" URIs from HTTP requests to functions?
   - KituraNIO … is still work in progress (2019.02)
+  - Kitura is not actively developed any more
 - (-) Con
 
 
