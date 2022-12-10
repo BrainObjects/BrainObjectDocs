@@ -56,6 +56,26 @@ Here are some additional pointers to other projects which might be helpful for s
 
 ### Related and interesting "Swift frameworks"
 
+Here is a quick list of project names. Some of them have been described in more detail further below:
+
+- Chaqmoq … <https://chaqmoq.dev>
+- Eagle … <https://github.com/joshb/EagleFramework>
+- Embassy … <https://github.com/envoy/Embassy>
+- Flying Fox … <https://github.com/swhitty/FlyingFox>
+- Hearken … <https://github.com/zorkdev/Hearken>
+- Hummingbird … <https://opticalaberration.com/2021/02/hummingbird.html>
+- Http.swift … <https://github.com/BiAtoms/Http.swift>
+- Macro … <https://github.com/Macro-swift>
+- Meridian … <https://github.com/khanlou/Meridian>
+- mod_swift … <http://mod-swift.org>
+- Kitura … <https://www.kitura.dev>
+- Koneko … <https://github.com/shanev/Koneko>
+- Perfect … <https://www.perfect.org>
+- Smoke … <https://github.com/amzn/smoke-framework>
+- swift-http-server … <https://github.com/bjtj/swift-http-server>
+- SwiftStack … <https://github.com/swiftstack/http>
+- Trevy … <https://github.com/Trevi-Swift/Trevi>
+
 
 #### Alamofire (server framework)
 
